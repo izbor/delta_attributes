@@ -2,7 +2,7 @@
 
     This gem makes updating specified number fields by ActiveRecord in unusual way.
 
-    Instead to generate sql script to update value in usual way like this:
+    Instead of generating sql script to update value in usual way like this:
 
       UPDATE users
       SET money = 10
@@ -43,6 +43,16 @@ Or install it yourself as:
       delta_attributes :money
 
     end
+
+  Now you can:
+
+    u = User.first # money = 3, id = 1
+    u.money = 5
+    u.save
+
+  will generate
+
+    UPDATE users SET money = money + 2 where id = 1
 
   Tested with rails 3.2.8.
 
