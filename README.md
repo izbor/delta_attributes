@@ -38,11 +38,11 @@ Or install it yourself as:
   To mark numeric field to be updated by "field = field + d" way you just need to add field
   name to delta_attributes like this:
 
-  class User < ActiveRecord::Base
+    class User < ActiveRecord::Base
 
-    delta_attributes :money
+      delta_attributes :money
 
-  end
+    end
 
 ## Contributing
 
