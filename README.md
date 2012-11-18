@@ -44,6 +44,8 @@ Or install it yourself as:
 
     end
 
+  Tested with rails 3.2.8.
+
 ## Contributing
 
 1. Fork it
