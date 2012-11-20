@@ -54,7 +54,7 @@ Or install it yourself as:
 
     UPDATE users SET money = money + 2 where id = 1
 
-  Tested with rails 3.2.8.
+  Tested with rails 3.2.0, 3.2.8, 3.2.9.
 
 ## Contributing
 
