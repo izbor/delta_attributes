@@ -6,12 +6,12 @@ require 'delta_attributes/version'
 Gem::Specification.new do |gem|
   gem.name          = "delta_attributes"
   gem.version       = DeltaAttributes::VERSION
-  gem.authors       = ["izbor"]
+  gem.authors       = ["Oleh Novosad, Yuriy Lavryk, Arya"]
   gem.email         = ["oleh.novosad@gmail.com"]
   gem.description   = %q{
     This gem makes updating specified number fields by ActiveRecord in unusual way.
 
-    Instead to generate sql script to update value in usual way like this:
+    Instead of generating sql script to update value in usual way like this:
 
       UPDATE users
       SET money = 10
