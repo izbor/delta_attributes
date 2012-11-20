@@ -11,13 +11,13 @@
     It replaces it with
 
       UPDATE users
-      SET money = money + d
+      SET money = money + delta
       WHERE id = 1;
 
-    where d is difference between old value and new value of that field.
+    where delta is difference between old value and new value of that field.
 
     This solves problem with simultaneous updating of same field by different threads
-    without locking record.
+    without locking record (problem known as race condition http://en.wikipedia.org/wiki/Race_condition).
 
 ## Installation
 

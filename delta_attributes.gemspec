@@ -20,12 +20,13 @@ Gem::Specification.new do |gem|
     It replaces it with
 
       UPDATE users
-      SET money = money + d
+      SET money = money + delta
       WHERE id = 1;
 
-    where d is difference between old value and new value of that field.
+    where delta is difference between old value and new value of that field.
 
-    This solves problem with simultaneous updating of the same field by different threads.
+    This solves problem with simultaneous updating of the same field by different threads
+    (problem known as race condition).
 
     Source code: https://github.com/izbor/delta_attributes
   }
