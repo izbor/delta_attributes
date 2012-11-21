@@ -6,7 +6,7 @@ require 'delta_attributes/version'
 Gem::Specification.new do |gem|
   gem.name          = "delta_attributes"
   gem.version       = DeltaAttributes::VERSION
-  gem.authors       = ["Oleh Novosad, Yuriy Lavryk, Arya"]
+  gem.authors       = ["Oleh (izbor) Novosad, Yuriy Lavryk, Arya"]
   gem.email         = ["oleh.novosad@gmail.com"]
   gem.description   = %q{
     This gem makes updating specified number fields by ActiveRecord in unusual way.
