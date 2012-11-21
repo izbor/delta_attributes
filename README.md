@@ -67,9 +67,12 @@ Or install it yourself as:
 
   You can use any operations with numeric field like:
 
-  u.money -= 10
-  u.money += 7
-  u.money = u.money * 2
+    u.money -= 10
+
+    u.money += 7
+
+    u.money = u.money * 2
+
   etc.
 
   It doesn't matter as delta is calculated as difference between original value received from database and new value
