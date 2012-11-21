@@ -18,8 +18,6 @@ module Arel
         retry
       end
 
-      #alias_method_chain :visit, :delta_attribute
-
       alias_method :visit_without_delta_attribute, :visit
       alias_method :visit, :visit_with_delta_attribute
     end

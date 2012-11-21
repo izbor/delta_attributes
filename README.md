@@ -78,7 +78,7 @@ Or install it yourself as:
   It doesn't matter as delta is calculated as difference between original value received from database and new value
   before update.
 
-  Tested with rails 3.2.0, 3.2.8, 3.2.9.
+  Tested with rails 3.1.0, 3.2.0, 3.2.8, 3.2.9.
 
 ## Contributing
 
