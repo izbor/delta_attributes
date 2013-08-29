@@ -1,10 +1,10 @@
 require 'set'
-require "delta_attributes/update_statement"
-require "delta_attributes/update_manager"
-require "delta_attributes/to_sql"
-require "delta_attributes/mysql"
-require "delta_attributes/crud"
-require "delta_attributes/visitor"
+require 'delta_attributes3_2/update_statement'
+require 'delta_attributes3_2/update_manager'
+require 'delta_attributes3_2/to_sql'
+require 'delta_attributes3_2/mysql'
+require 'delta_attributes3_2/crud'
+require 'delta_attributes3_2/visitor'
 
 module ActiveRecord
   # = Active Record Persistence
