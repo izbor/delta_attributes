@@ -35,7 +35,7 @@ Or install it yourself as:
 
 ## Usage
 
-  To mark numeric field to be updated by "field = field + d" way you just need to add field
+  To mark numeric field to be updated by "field = field + delta" way you just need to add field
   name to delta_attributes like this:
 
     class User < ActiveRecord::Base
@@ -50,11 +50,35 @@ Or install it yourself as:
     u.money = 5
     u.save
 
-  will generate
+  rails will generate
 
     UPDATE users SET money = money + 2 where id = 1
 
-  Tested with rails 3.2.0, 3.2.8, 3.2.9.
+  and if
+
+    u = User.first # money = 5, id = 1
+    u.money = 1
+    u.money += 3
+    u.save
+
+  rails will generate
+
+    UPDATE users SET money = money - 1 where id = 1
+
+  You can use any operations with numeric field like:
+
+    u.money -= 10
+
+    u.money += 7
+
+    u.money = u.money * 2
+
+  etc.
+
+  It doesn't matter as delta is calculated as difference between original value received from database and new value
+  before update.
+
+  Tested with rails 3.1.0, 3.2.0, 3.2.8, 3.2.9.
 
 ## Contributing
 
