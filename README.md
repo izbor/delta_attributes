@@ -19,6 +19,10 @@
     This solves problem with simultaneous updating of same field by different threads
     without locking record (problem known as race condition http://en.wikipedia.org/wiki/Race_condition).
 
+    What it means for you is that you do NOT need to LOCK users table record when updating money field
+    from different threads if you "mark" money field as delta attribute. Sometimes this improves application
+    speed significantly as other threads don't wait till current thread finishes it's work.
+
 ## Installation
 
 Add this line to your application's Gemfile:
