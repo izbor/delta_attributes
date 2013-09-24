@@ -22,7 +22,8 @@ module ActiveRecord
         args.each do |attribute|
 
           if self.columns_hash[attribute.to_s].blank?
-            raise InvalidDeltaColumn.new("#{self.to_s} model doesn't have attribute with name '#{attribute}.")
+            logger.warn("#{self.to_s} model doesn't have attribute with name #{attribute} or you have pending migrations.")
+            next
           end
 
           if self.columns_hash[attribute.to_s] && !self.columns_hash[attribute.to_s].number?
