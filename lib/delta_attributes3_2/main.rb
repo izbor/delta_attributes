@@ -52,6 +52,11 @@ module ActiveRecord
         return @_delta_attributes if args.empty?
 
         args.each do |attribute|
+          if self.columns_hash[attribute.to_s].blank?
+            logger.warn("#{self.to_s} model doesn't have attribute with name '#{attribute}' or you have pending migrations.")
+            next
+          end
+
           if self.columns_hash[attribute.to_s] && !self.columns_hash[attribute.to_s].number?
             raise InvalidDeltaColumn.new("Delta attributes only work with number attributes, column `#{attribute}` is not a number.")
           end
